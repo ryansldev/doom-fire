@@ -3,17 +3,20 @@ const fireWidth = 10;
 const fireHeight = 10;
 
 function start() {
-  createFirePropagation();
+  createFireDataStruture();
   createFireSource();
   renderFire();
 }
 
-function createFirePropagation() {
+function createFireDataStruture() {
   const numberOfPixels = fireWidth * fireHeight;
 
   for(let i = 0; i < numberOfPixels; i++) {
     firePixelsArray[i] = 0;
   }
+}
+
+function calculateFirePropagation() {
 }
 
 function renderFire() {
