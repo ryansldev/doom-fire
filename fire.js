@@ -6,6 +6,8 @@ function start() {
   createFireDataStruture();
   createFireSource();
   renderFire();
+  
+  setInterval(calculateFirePropagation, 1000);
 }
 
 function createFireDataStruture() {
@@ -17,6 +19,12 @@ function createFireDataStruture() {
 }
 
 function calculateFirePropagation() {
+  for(let column = 0; column < fireWidth; column++) {
+    for(let row = 0; row < fireHeight; row++) {
+      const pixelIndex = column + (fireWidth * row);
+      console.log(pixelIndex);
+    }
+  }
 }
 
 function renderFire() {
